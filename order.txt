@@ -1,0 +1,53 @@
+import java.util.*;
+class order{
+	public static void main(String ar[])
+	{
+		int asc[]=new int[];
+		int des[]=new int[];
+		System.out.println("Enter size of array");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter elements of array");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		temp=arr[0];
+		for(int i=0;i<n;i++)
+		{
+			for(int k=0;k<i;k++)
+			{
+	
+				if(temp>arr[i])
+				{
+					temp=arr[i];	
+				}
+				asc[k]=temp;
+			}
+		}
+		for(int k:asc)
+		System.out.println("asc"+asc[k]);
+		temp1=arr[0];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		temp1=arr[0];
+		for(int i=0;i<n;i++)
+		{
+			for(int k=0;k<i;k++)
+			{
+	
+				if(temp1<arr[i])
+				{
+					temp1=arr[i];	
+				}
+				des[k]=temp1;
+			}
+		}
+		for(int k:asc)
+		System.out.println("des"+des[k]);
+	}
+		
+}
